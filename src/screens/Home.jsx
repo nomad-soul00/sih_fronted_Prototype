@@ -39,7 +39,7 @@ function CardLink({ color, to, title, desc }) {
   return (
     <Link
       to={to}
-      className="block rounded-lg border border-gray-200 p-5 hover:border-gray-600 hover:shadow-lg transition"
+      className="block rounded-lg min-h-[120px] border border-gray-200 p-5 hover:border-gray-600 hover:shadow-lg transition"
       style={{ backgroundColor: color }}
     >
       <div className="flex items-start justify-between">
