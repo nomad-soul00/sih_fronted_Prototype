@@ -23,6 +23,8 @@ const MheiLocation = ({ locationData, idealvalues, standard, standardName }) => 
 
     } = locationData
 
+    // console.log(PEI_NEI_category)
+
 
     const [isTable1Minimized, setIsTable1Minimized] = useState(false)
     const [isTable2Minimized, setIsTable2Minimized] = useState(false)
@@ -45,6 +47,7 @@ const MheiLocation = ({ locationData, idealvalues, standard, standardName }) => 
             return "Invalid values or no classification available";
         }
     }
+   
 
     const getCategoryColor = (categoryName) => {
         switch (categoryName) {

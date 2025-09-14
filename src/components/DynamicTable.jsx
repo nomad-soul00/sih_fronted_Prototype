@@ -21,7 +21,16 @@ export default function DynamicTable({
     MheiPerMetal = {},
     PEI_NEI_category = {},
 }) {
-    // Internal config based on table type
+
+
+    // console.log(calculateNormalizedWeights(Wi, MheiPerMetal));
+    // console.log(MheiPerMetal);
+
+
+
+
+
+
     const getColumns = () => {
         if (type === "concentration") {
             return [
