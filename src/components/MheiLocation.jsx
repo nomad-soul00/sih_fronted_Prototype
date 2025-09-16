@@ -135,6 +135,7 @@ const MheiLocation = ({ locationData, idealvalues, standard, standardName }) => 
         return `${metalLabel} (${maxValue.toFixed(2)})`;
     };
 
+        console.log('MHEI check', { NEI, PEI, typeNEI: typeof NEI, typePEI: typeof PEI, result: getWaterQuality(NEI, PEI) });
 
 
     return (

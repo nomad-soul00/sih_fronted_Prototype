@@ -27,7 +27,7 @@ export default function HMPI() {
     setComputationData(null);
   }
 
- const baseUrl = import.meta.env.VITE_API_URL ;
+ const baseUrl = import.meta.env.VITE_API_URL;
 
   const handleCalculation = async () => {
     try {
