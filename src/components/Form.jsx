@@ -89,7 +89,7 @@ const Form = ({ onUploadSuccess, uploadUrl, storageKey }) => {
 
     return (
         <div>
-            <a href={`https://sih-backend-prototype.vercel.app/template.xlsx`} className='text-white border hover:bg-blue-500 cursor-pointer px-4 py-1 rounded-sm bg-blue-800 '>
+            <a href={`/template.xlsx`} className='text-white border hover:bg-blue-500 cursor-pointer px-4 py-1 rounded-sm bg-blue-800 '>
                 Download Template
             </a>
             <form onSubmit={handleSubmit} className="border border-gray-300 p-6 mt-2 rounded-lg flex flex-col sm:flex-col gap-6 items-center" enctype="multipart/form-data" method="post" >
