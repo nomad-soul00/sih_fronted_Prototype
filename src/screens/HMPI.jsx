@@ -27,9 +27,11 @@ export default function HMPI() {
     setComputationData(null);
   }
 
+ const baseUrl = import.meta.env.VITE_API_URL ;
+
   const handleCalculation = async () => {
     try {
-      const response = await fetch("https://sih-backend-prototype.vercel.app/api/v1/compute/hmpi", {
+      const response = await fetch(`${baseUrl}/api/v1/compute/hmpi`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -83,7 +85,7 @@ export default function HMPI() {
 
 
       <Form
-        uploadUrl={`https://sih-backend-prototype.vercel.app/api/v1/data/hmpi/upload`}
+        uploadUrl={`${baseUrl}/api/v1/data/hmpi/upload`}
         storageKey="HMPI_UploadedData"
         onUploadSuccess={(data) => (data?.error ? console.error("Upload failed:", data.error) : setUploadedData(data),
           setComputationData(null))}

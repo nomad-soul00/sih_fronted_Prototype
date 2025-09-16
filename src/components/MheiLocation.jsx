@@ -39,15 +39,15 @@ const MheiLocation = ({ locationData, idealvalues, standard, standardName }) => 
             return "Good";
         } else if (NEI > -100 && NEI <= 0 && PEI > 50 && PEI <= 100) {
             return "Moderate";
+        } else if (NEI === 0 && PEI > 100) {
+            return "Unsuitable";  // Moved up
         } else if (NEI > -100 && NEI <= 0 && PEI > 100) {
             return "Poor";
-        } else if (NEI === 0 && PEI > 100) {
-            return "Unsuitable";
         } else {
             return "Invalid values or no classification available";
         }
     }
-   
+
 
     const getCategoryColor = (categoryName) => {
         switch (categoryName) {
