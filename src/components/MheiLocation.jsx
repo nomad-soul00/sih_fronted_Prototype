@@ -135,7 +135,7 @@ const MheiLocation = ({ locationData, idealvalues, standard, standardName }) => 
         return `${metalLabel} (${maxValue.toFixed(2)})`;
     };
 
-        console.log('MHEI check', { NEI, PEI, typeNEI: typeof NEI, typePEI: typeof PEI, result: getWaterQuality(NEI, PEI) });
+        // console.log('MHEI check', { NEI, PEI, typeNEI: typeof NEI, typePEI: typeof PEI, result: getWaterQuality(NEI, PEI) });
 
 
     return (
@@ -145,7 +145,7 @@ const MheiLocation = ({ locationData, idealvalues, standard, standardName }) => 
                 <div className="flex items-center justify-between">
                     <h3 className="text-sm md:text-xl font-semibold text-slate-900 flex items-center gap-2">
                         <MapPin className="w-3 md:w-5 h-5 text-blue-600" />
-                        {`${location}iiihi`}
+                        {`${location}`}
                     </h3>
                     <div className="flex items-center gap-2 md:gap-3">
                         <span className={`${getCategoryColor(getWaterQuality(NEI, PEI))} px-3 py-1 rounded-full text-[11px] md:text-sm font-medium`}>
