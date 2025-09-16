@@ -33,19 +33,22 @@ const MheiLocation = ({ locationData, idealvalues, standard, standardName }) => 
     const [hoveredInfo, setHoveredInfo] = useState(null)
 
     function getWaterQuality(NEI, PEI) {
-        if (NEI >= -100 && NEI <= 0 && PEI === 0) {
-            return "Excellent";
-        } else if (NEI > -100 && NEI <= 0 && PEI > 0 && PEI <= 50) {
-            return "Good";
-        } else if (NEI > -100 && NEI <= 0 && PEI > 50 && PEI <= 100) {
-            return "Moderate";
-        } else if (NEI === 0 && PEI > 100) {
-            return "Unsuitable";  // Moved up
-        } else if (NEI > -100 && NEI <= 0 && PEI > 100) {
-            return "Poor";
-        } else {
-            return "Invalid values or no classification available";
+        if (NEI >= -100 && NEI <= 0) {
+            if (PEI === 0) {
+                return "Excellent";
+            } else if (PEI > 0 && PEI <= 50) {
+                return "Good";
+            } else if (PEI > 50 && PEI <= 100) {
+                return "Moderate";
+            } else if (NEI === 0 && PEI > 100) {
+                return "Unsuitable";
+            } else if (PEI > 100) {
+                return "Poor";
+            }
         }
+
+        return "Invalid values or no classification available";
+
     }
 
 
