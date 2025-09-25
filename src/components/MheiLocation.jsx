@@ -25,7 +25,7 @@ const MheiLocation = ({ locationData, idealvalues, standard, standardName }) => 
 
     // // console.log(standard);
 
-    
+
 
 
     const [isTable1Minimized, setIsTable1Minimized] = useState(false)
@@ -35,23 +35,33 @@ const MheiLocation = ({ locationData, idealvalues, standard, standardName }) => 
     const [hoveredInfo, setHoveredInfo] = useState(null)
 
     function getWaterQuality(NEI, PEI) {
-        if (NEI >= -100 && NEI <= 0) {
-            if (PEI === 0) {
-                return "Excellent";
-            } else if (PEI > 0 && PEI <= 50) {
-                return "Good";
-            } else if (PEI > 50 && PEI <= 100) {
-                return "Moderate";
-            } else if (NEI === 0 && PEI > 100) {
-                return "Unsuitable";
-            } else if (PEI > 100) {
-                return "Poor";
-            }
+        if (NEI < -100 || NEI > 0) {
+            return "Invalid values or no classification available";
+        }
+
+        if (NEI === 0 && PEI > 100) {
+            return "Unsuitable";
+        }
+
+        if (PEI === 0) {
+            return "Excellent";
+        }
+
+        if (PEI > 0 && PEI <= 50) {
+            return "Good";
+        }
+
+        if (PEI > 50 && PEI <= 100) {
+            return "Moderate";
+        }
+
+        if (PEI > 100) {
+            return "Poor";
         }
 
         return "Invalid values or no classification available";
-
     }
+
 
 
     const getCategoryColor = (categoryName) => {
@@ -137,7 +147,7 @@ const MheiLocation = ({ locationData, idealvalues, standard, standardName }) => 
         return `${metalLabel} (${maxValue.toFixed(2)})`;
     };
 
-        // console.log('MHEI check', { NEI, PEI, typeNEI: typeof NEI, typePEI: typeof PEI, result: getWaterQuality(NEI, PEI) });
+    // console.log('MHEI check', { NEI, PEI, typeNEI: typeof NEI, typePEI: typeof PEI, result: getWaterQuality(NEI, PEI) });
 
 
     return (
