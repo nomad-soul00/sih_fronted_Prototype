@@ -78,7 +78,7 @@ export default function HMPI() {
 
       <Alert
         title="Prototype Notice"
-        children={`Sample input data must match the template format: multiple locations for a single year. Click the 'Download Template' button for sample parameters || Limit - 20 Locations`}
+        children={`Sample input data must match the template format: multiple locations for a single year. Click the 'Download Template' button for sample parameters`}
         variant="danger"
       />
 

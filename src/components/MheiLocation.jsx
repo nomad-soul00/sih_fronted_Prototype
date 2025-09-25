@@ -21,9 +21,11 @@ const MheiLocation = ({ locationData, idealvalues, standard, standardName }) => 
         relative_Wi,
         percentageContributions
 
-    } = locationData
+    } = locationData;
 
-    // console.log(PEI_NEI_category)
+    // // console.log(standard);
+
+    
 
 
     const [isTable1Minimized, setIsTable1Minimized] = useState(false)

@@ -441,9 +441,17 @@ export default function SummarySection({ computationData }) {
                   </div>
                   <div className="w-full  bg-slate-50 border-2 border-dashed border-slate-300 rounded-lg px-0 py-2 md:p-6">
                     <LeadingPollutantChart leadingCounts={leadingCounts} />
-
                   </div>
                 </div>
+
+                {/* Map PLaceholder */}
+                <div className="rounded-lg border  border-gray-200 bg-white p-2 md:p-6">
+                  <div className="w-full h-[300px] text-center  bg-slate-50 border-2 border-dashed border-slate-300 rounded-lg px-0 py-2 md:p-6">
+                    <p className="text-lg md:text-lg font-semibold text-gray-500" >Map Placeholder</p>
+                  </div>
+                </div>
+
+
               </div>
             )}
           </section>

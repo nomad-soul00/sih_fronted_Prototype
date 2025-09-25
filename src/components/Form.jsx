@@ -91,7 +91,7 @@ const Form = ({ onUploadSuccess, uploadUrl, storageKey }) => {
         <div>
             <a href={`/template.xlsx`} className='text-white border hover:bg-blue-500 cursor-pointer px-4 py-1 rounded-sm bg-blue-800 '>
                 Download Template
-            </a>
+            </a> <p className='text-red-500 mt-2'>for now only .xlsx files are allowed</p>
             <form onSubmit={handleSubmit} className="border border-gray-300 p-6 mt-2 rounded-lg flex flex-col sm:flex-col gap-6 items-center" enctype="multipart/form-data" method="post" >
 
                 <div className="max-w-sm space-y-3 text-center">
